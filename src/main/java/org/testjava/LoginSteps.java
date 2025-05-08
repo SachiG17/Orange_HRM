@@ -22,7 +22,7 @@ public class LoginSteps {
         System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
         driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.w
+        driver.manage().window().maximize();
 
     }
     @And("User is on LogIn Page")
