@@ -1,4 +1,4 @@
-Feature: Orange HRM LogIn Funcationality
+Feature: Orange HRM LogIn Functionality
   Scenario:Verify the login using credentials
     Given Browser is Opened
     And User is on LogIn Page
