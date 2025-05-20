@@ -15,20 +15,11 @@ import java.time.Duration;
 public class LoginSteps {
 
     //Webdriver initiated
-    WebDriver driver = null;
+    WebDriver driver = CommonMethods.getDriver();
     LoginPage loginPage;
 
     //Opening the Browser
-    @Given("Browser is Opened")
-    public void browser_is_opened() {
-        // Browser Opened
-        System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
-        driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().window().maximize();
-    }
-
-    @And("User is on LogIn Page")
+    @Given("User is on LogIn Page")
     public void user_is_on_log_in_page() {
         // Write code here that turns the phrase above into concrete actions
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

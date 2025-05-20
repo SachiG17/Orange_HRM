@@ -1,29 +1,18 @@
 package org.testjava;
 import Pages.LoginPage;
 import Pages.PIMPage;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-
-import java.time.Duration;
 
 public class AddEmployeeSteps {
-    WebDriver driver;
+    WebDriver driver = CommonMethods.getDriver();
     LoginPage login;
     PIMPage pimPage;
 
-    @Given("Open the Browser")
-    public void home_page_is_opened() {
-        System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
-        driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().window().maximize();
-    }
-    @And("Open the PIM page")
+    @Given("Open the PIM page")
     public void open_the_pim_page() {
         //Opens the Login Page with valid creds and then open PIM page
         login = new LoginPage(driver);
