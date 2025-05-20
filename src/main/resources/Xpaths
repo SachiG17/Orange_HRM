@@ -1,0 +1,5 @@
+//MyInfo Page
+myInfoBtn = '//span[text()='My Info']',
+firstName = 'input[@name='firstName']',
+middleName = '//input[@name='middleName'],
+lastName = '//input[@name='lastName']
