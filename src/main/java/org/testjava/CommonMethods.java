@@ -15,8 +15,8 @@ public class CommonMethods {
     public void openBrowser() {
         // Browser Opened
         System.out.println("Opening the browser...");
-        System.setProperty("webdriver.edge.driver","src/test/resources/drivers/msedgedriver.exe");
-        driver = new EdgeDriver();
+        System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
     }
